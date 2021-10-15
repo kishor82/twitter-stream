@@ -1,0 +1,5 @@
+export const SET_TWEETS = "CART_ADD_ITEM";
+export const SET_KEYWORD = "SET_KEYWORD";
+export const SET_TWEETLIST_LIMIT = "SET_TWEETLIST_LIMIT";
+export const SET_UNREAD_COUNT = "SET_UNREAD_COUNT";
+export const ERASE_TWEETS = "ERASE_TWEETS";

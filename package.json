@@ -1,0 +1,36 @@
+{
+  "name": "tweeter_stream_api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "KishorRathva",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node ./preinstall_check",
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "build:prod": "cd client && yarn build",
+    "heroku-postbuild": "yarn install --cwd client && yarn build:prod",
+    "docker-mongo": "sudo docker run -p 27017:27017  mongo:4.0.26-xenial",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "engines": {
+    "node": "^12.14.0",
+    "yarn": "^1.22.11"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "boom": "^7.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.0.10",
+    "needle": "^3.0.0",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.13"
+  }
+}
